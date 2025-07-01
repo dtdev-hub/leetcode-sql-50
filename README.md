@@ -10,5 +10,5 @@ This repository contains my daily solutions to the [LeetCode Top 50 SQL Question
 
 ## 📁 Structure
 
-Each problem is saved as a `.sql` file with the following format: <problem-id>_<short-title>.sql
+Each problem is saved as a `.sql` file with the following format: problem-id_short-title.sql
 
