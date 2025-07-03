@@ -1,2 +1,3 @@
 # LeetCode Problem to Repractice
 - 1251. Average Selling Price (Aggregate)
+- 1280. Students and Examinations (Basic Joins)
