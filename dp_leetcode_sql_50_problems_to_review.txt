@@ -1,4 +1,4 @@
 # LeetCode Problem to Repractice
 - 1251. Average Selling Price (Aggregate)
 - 1280. Students and Examinations (Basic Joins)
-- 1731. The Number of Employees Which Report to Each Employee
+- 1731. The Number of Employees Which Report to Each Employee (Advanced Select and Joins)
