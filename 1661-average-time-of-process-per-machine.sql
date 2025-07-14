@@ -1,24 +1,25 @@
-"""
-Table: Teacher
-
-+-------------+------+
-| Column Name | Type |
-+-------------+------+
-| teacher_id  | int  |
-| subject_id  | int  |
-| dept_id     | int  |
-+-------------+------+
-(subject_id, dept_id) is the primary key (combinations of columns with unique values) of this table.
-Each row in this table indicates that the teacher with teacher_id teaches the subject subject_id in the department dept_id.
-
-
-Write a solution to calculate the number of unique subjects each teacher teaches in the university.
-
-Return the result table in any order.
-"""
+-- Original approach (using subquery)
 SELECT
-    teacher_id,
-    COUNT(DISTINCT subject_id) AS cnt
-FROM Teacher
-GROUP BY teacher_id;
+    machine_id,
+    ROUND(AVG(running_time)::NUMERIC, 3) AS processing_time
+FROM (
+    SELECT
+        machine_id,
+        process_id,
+        (MAX(CASE WHEN activity_type = 'end' THEN timestamp END) -
+         MAX(CASE WHEN activity_type = 'start' THEN timestamp END))
+        AS running_time
+    FROM Activity
+    GROUP BY machine_id, process_id
+) AS temp_table
+GROUP BY machine_id;
 
+-- Alternative optimized approach (direct aggregation) (Fastest)
+SELECT
+    machine_id,
+    ROUND((
+        SUM(CASE WHEN activity_type = 'end' THEN timestamp ELSE 0 END) -
+        SUM(CASE WHEN activity_type = 'start' THEN timestamp ELSE 0 END)
+    )::NUMERIC / COUNT(DISTINCT process_id), 3) AS processing_time
+FROM Activity
+GROUP BY machine_id;
