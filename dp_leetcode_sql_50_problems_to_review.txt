@@ -4,3 +4,4 @@
 - 1731. The Number of Employees Which Report to Each Employee (Advanced Select and Joins)
 - 1661. Average Time of Process per Machine (Basic Joins)
 - 1211. Queries Quality and Percentage
+- 570. Managers with at Least 5 Direct Reports
