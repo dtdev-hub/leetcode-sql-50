@@ -6,3 +6,4 @@
 - 1211. Queries Quality and Percentage
 - 570. Managers with at Least 5 Direct Reports
 - 1045. Customers Who Bought All Products
+- 1934. Confirmation Rate
