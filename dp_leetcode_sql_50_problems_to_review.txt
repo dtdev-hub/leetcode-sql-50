@@ -12,3 +12,4 @@
 - 1164. Product Price at a Given Date
 - 1341. Movie Rating
 - 1327. List the Products Ordered in a Period
+- 1907. Count Salary Categories
